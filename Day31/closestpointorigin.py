@@ -5,7 +5,6 @@ class Solution:
     def solve(self, A, B):
         A.sort(key=self.Eucled)
         return A[:B]
-        
-    def Eucled(self,l):
-        return (l[0]**2+l[1]**2)
 
+    def Eucled(self, l):
+        return l[0] ** 2 + l[1] ** 2
