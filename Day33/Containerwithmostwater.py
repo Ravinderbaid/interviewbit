@@ -1,14 +1,14 @@
 class Solution:
-	# @param A : list of integers
-	# @return an integer
-	def maxArea(self, A):
-	    l = 0
-        r = len(A) -1
+    # @param A : list of integers
+    # @return an integer
+    def maxArea(self, A):
+        left = 0
+        r = len(A) - 1
         area = 0
-        while l < r: 
-            area =  max(area, (min(A[l],A[r])*(r-l)))
-            if A[l]<A[r]:
-                l+=1
+        while left < r:
+            area = max(area, (min(A[left], A[r]) * (r - left)))
+            if A[left] < A[r]:
+                left += 1
             else:
-                r-=1
-        return area 
+                r -= 1
+        return area

@@ -10,9 +10,9 @@ class Solution:
         la = len(a)
         lb = len(b)
         lc = len(c)
-        
+
         i = j = k = 0
-        ans = float('inf')
+        ans = float("inf")
         result = 0
         while i < la and j < lb and k < lc:
             minimum = min(a[i], b[j], c[k])
@@ -28,5 +28,5 @@ class Solution:
                 j += 1
             else:
                 k += 1
-        i,j,k = result      
+        i, j, k = result
         return max(abs(A[i] - B[j]), abs(B[j] - C[k]), abs(C[k] - A[i]))
